@@ -1,0 +1,28 @@
+{
+  "name": "RecogLab",
+  "version": "0.1.5",
+  "description": "RecogLab descriptions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+    "stormpath": "0.13.2"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/recoglab"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "stormpath"
+  ],
+  "license": "MIT"
+}
