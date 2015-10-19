@@ -6,12 +6,12 @@ var stormpath = require('stormpath');
 var client = null;
 var homedir = process.env.HOME;
 var keyfile = homedir + '/Documents/workspace/recoglab/keys/apiKey.properties';
-stormpath.loadApiKey(keyfile, function apiKeyFileLoaded(err, apiKey) {
-  if (err) {
-    console.log(err);
-  }
+//stormpath.loadApiKey(keyfile, function apiKeyFileLoaded(err, apiKey) {
+  //if (err) {
+    //console.log(err);
+  //}
  
-  client = new stormpath.Client({apiKey: apiKey});
+  //client = new stormpath.Client({apiKey: apiKey});
   /*client.getApplications({name:'RecogLab'}, function(err, applications){
   	if (err) throw err;
 
@@ -55,7 +55,7 @@ stormpath.loadApiKey(keyfile, function apiKeyFileLoaded(err, apiKey) {
       });
     });
 	});*/
-});
+//});
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
@@ -74,10 +74,6 @@ app.get('/register', function(request, response) {
 
 app.get('/login', function(request, response) {
   response.render('pages/login');
-});
-
-app.get('/hi', function(request, response) {
-  fb.set('hi');
 });
 
 app.listen(app.get('port'), function() {
