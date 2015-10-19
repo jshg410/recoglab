@@ -5,7 +5,7 @@ var app = express();
 var stormpath = require('stormpath');
 var client = null;
 var homedir = process.env.HOME;
-var keyfile = homedir + '/Documents/keys/apiKey.properties';
+var keyfile = homedir + '/Documents/workspace/recoglab/keys/apiKey.properties';
 stormpath.loadApiKey(keyfile, function apiKeyFileLoaded(err, apiKey) {
   if (err) {
     console.log(err);
